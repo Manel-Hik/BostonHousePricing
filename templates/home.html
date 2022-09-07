@@ -1,3 +1,6 @@
+
+
+
 <!DOCTYPE html>
 <html >
 
@@ -8,8 +11,14 @@
 <link href='https://fonts.googleapis.com/css?family=Arimo' rel='stylesheet' type='text/css'>
 <link href='https://fonts.googleapis.com/css?family=Hind:300' rel='stylesheet' type='text/css'>
 <link href='https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300' rel='stylesheet' type='text/css'>
-
-  
+<link rel="stylesheet" href="styles.css">
+<style>
+  body {background-color: rgb(116, 221, 235);}
+  .login {
+  max-width: 500px;
+  margin: auto;
+}
+</style>
 </head>
 
 <body>
@@ -21,7 +30,11 @@
       <input type="text" name="CRIM" placeholder="CRIM" required="required" /><br>
     	<input type="text" name="ZN" placeholder="ZN" required="required" /><br>
         <input type="text" name="INDUS" placeholder="INDUS" required="required" /><br>
-        <input type="text" name="CHAS" placeholder="CHAS" required="required" /><br>
+        <!--<input type="text" name="CHAS" placeholder="CHAS" required="required" /><br> -->
+        <select id="CHAS" name="CHAS">
+          <option value="0">0</option>
+          <option value="1">1</option>
+        </select><br>
         <input type="text" name="NOX" placeholder="NOX" required="required" /><br>
         <input type="text" name="RM" placeholder="RM" required="required" /><br>
         <input type="text" name="Age" placeholder="Age" required="required" /><br>
@@ -40,9 +53,9 @@
    <br>
    <br>
   
-   
+   {{prediction_text}}
+
  </div>
- {{prediction_text}}
 
 </body>
 </html>
